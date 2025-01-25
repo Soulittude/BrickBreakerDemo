@@ -10,25 +10,25 @@ public class Paddle : MonoBehaviour
 
     private void Awake()
     {
-        this.rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            this.dir = Vector2.left;
+            dir = Vector2.left;
 
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            this.dir = Vector2.right;
+            dir = Vector2.right;
 
         else
-            this.dir = Vector2.zero;
+            dir = Vector2.zero;
     }
 
     private void FixedUpdate()
     {
-        if (this.dir != Vector2.zero)
-            this.rb.AddForce(this.dir * this.speed);
+        if (dir != Vector2.zero)
+            rb.AddForce(dir * speed);
     }
 
     private void OnCollisionEnter2D(Collision2D col)

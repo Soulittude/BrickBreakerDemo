@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4275780692471723469}
   - component: {fileID: 8696796292787854141}
   - component: {fileID: 2066007782808903460}
-  - component: {fileID: 7550971112598064249}
+  - component: {fileID: 3212525278370487332}
   m_Layer: 0
-  m_Name: Brick3
+  m_Name: Brick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ded5f72da8d54b44d85ace0c5548180d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fae375f9c3347604890ddde51bb04cdb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7550971112598064249
+--- !u!114 &3212525278370487332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,4 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f20e7082438f2428fba0381ade0013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brickHealth: 3
+  states:
+  - {fileID: 21300000, guid: 9291c8a2243a8954aa4836cbb3d8cd46, type: 3}
+  - {fileID: 21300000, guid: fae375f9c3347604890ddde51bb04cdb, type: 3}
+  - {fileID: 21300000, guid: 8a1f3a2b7be337041b9f2c591cc617db, type: 3}
+  - {fileID: 21300000, guid: ded5f72da8d54b44d85ace0c5548180d, type: 3}
+  - {fileID: 21300000, guid: 5e536f2cc14b65a44b8e9532d24f6c72, type: 3}
+  breakable: 0
