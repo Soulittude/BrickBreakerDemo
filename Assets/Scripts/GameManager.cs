@@ -47,6 +47,20 @@ public class GameManager : MonoBehaviour
     public void Hit(Brick brick)
     {
         score += brick.points;
+
+        if(LevelCleared())
+            LoadLevel(level+1);
+    }
+
+    private bool LevelCleared()
+    {
+        for(int i=0;i<bricks.Length;i++)
+        {
+            if(bricks[i].gameObject.activeInHierarchy && bricks[i].breakable)
+                return false;
+        }
+
+        return true;
     }
 
     private void ResetLevel()
