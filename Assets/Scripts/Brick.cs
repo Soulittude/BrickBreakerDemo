@@ -8,6 +8,7 @@ public class Brick : MonoBehaviour
     public Sprite[] states;
 
     public int brickHealth { get; private set; }
+    public int points = 100;
     public bool breakable;
 
     private void Awake()
@@ -35,6 +36,8 @@ public class Brick : MonoBehaviour
             gameObject.SetActive(false);
         else
             sr.sprite = states[brickHealth - 1];
+
+        FindObjectOfType<GameManager>().Hit(this);
     }
 
     private void OnCollisionEnter2D(Collision2D col)
