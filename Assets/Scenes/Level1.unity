@@ -1161,8 +1161,9 @@ GameObject:
   m_Component:
   - component: {fileID: 892712155}
   - component: {fileID: 892712154}
+  - component: {fileID: 892712156}
   m_Layer: 0
-  m_Name: Down
+  m_Name: Fall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1228,6 +1229,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &892712156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892712153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ea0b35070934fc409f66c85449efc82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &960251506
 PrefabInstance:
   m_ObjectHideFlags: 0

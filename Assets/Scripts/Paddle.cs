@@ -13,6 +13,12 @@ public class Paddle : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    public void ResetPaddle()
+    {
+        transform.position = new Vector2(0f, transform.position.y);
+        rb.velocity = Vector2.zero;
+    }
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))

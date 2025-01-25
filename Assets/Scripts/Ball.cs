@@ -15,6 +15,14 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
+        ResetBall();
+    }
+
+    public void ResetBall()
+    {
+        transform.position = Vector2.zero;
+        rb.velocity = Vector2.zero;
+
         //Function starts after 1 second delay
         Invoke(nameof(SetRandomLaunch), 1f);
     }

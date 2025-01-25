@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Brick : MonoBehaviour
 {
-    public SpriteRenderer sr { get; private set;}
+    public SpriteRenderer sr { get; private set; }
     public Sprite[] states;
 
     public int brickHealth { get; private set; }
@@ -18,6 +18,12 @@ public class Brick : MonoBehaviour
 
     private void Start()
     {
+        ResetBrick();
+    }
+
+    public void ResetBrick()
+    {
+        gameObject.SetActive(true);
         if (breakable)
         {
             brickHealth = states.Length;
@@ -27,12 +33,12 @@ public class Brick : MonoBehaviour
 
     private void Hit()
     {
-        if(!breakable)
+        if (!breakable)
             return;
-        
+
         brickHealth--;
 
-        if(brickHealth<=0)
+        if (brickHealth <= 0)
             gameObject.SetActive(false);
         else
             sr.sprite = states[brickHealth - 1];
@@ -42,7 +48,7 @@ public class Brick : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.name == "Ball")
+        if (col.gameObject.name == "Ball")
             Hit();
     }
 }
