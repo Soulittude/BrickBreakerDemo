@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour
     public Rigidbody2D rb { get; private set; }
     public Vector2 dir {get; private set;}
 
-    public float ballSpeed = 400f;
+    public float ballSpeed = 500f;
 
     void Awake()
     {
@@ -16,10 +16,16 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
+        //Function starts after 1 second delay
+        Invoke(nameof(SetRandomLaunch), 1f);
+    }
+
+    private void SetRandomLaunch()
+    {
         Vector2 force = Vector2.zero;
         force.x = Random.Range(-1f, 1f);
         force.y = -1;
 
-        rb.AddForce(force * ballSpeed);
+        rb.AddForce(force.normalized * ballSpeed);
     }
 }
