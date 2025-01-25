@@ -5,7 +5,6 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public Rigidbody2D rb { get; private set; }
-    public Vector2 dir {get; private set;}
 
     public float ballSpeed = 500f;
 
